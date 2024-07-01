@@ -10,18 +10,18 @@ with open('iris_rf.pkl', 'rb') as f:
 
 species = ['setosa', 'versicolor', 'virginica']
 
-st.title("Iris Flower Classification")
-st.write("This app correctly classifies iris flower among 3 possible species")
+st.title("Pengklasifikasian Bunga IRis")
+st.write("Mengklasifikasi Bunga Iris menjadi 3 jenis secara akurat")
 
 # Creating Sidebar for inputs
 st.sidebar.title("Inputs")
-sepal_length = st.sidebar.number_input("sepal length (cm)", 4.3, 7.9, 5.0)
-sepal_width = st.sidebar.number_input("sepal width (cm)", 2.0, 4.4, 3.6)
-petal_length = st.sidebar.number_input("petal length (cm)", 1.0, 6.9, 1.4)
-petal_width = st.sidebar.number_input("petal width (cm)", 0.1, 2.5, 0.2)
+sepal_length = st.sidebar.number_input("panjang kelopak (cm)", 4.3, 7.9, 5.0)
+sepal_width = st.sidebar.number_input("lebar kelopak (cm)", 2.0, 4.4, 3.6)
+petal_length = st.sidebar.number_input("panjang helai (cm)", 1.0, 6.9, 1.4)
+petal_width = st.sidebar.number_input("lebar helai (cm)", 0.1, 2.5, 0.2)
 
 # Button to trigger prediction
-if st.button("Predict"):
+if st.button("Prediksi"):
 # Getting Prediction from model
     inp = np.array([sepal_length, sepal_width, petal_length, petal_width])
     inp = np.expand_dims(inp, axis=0)
@@ -29,5 +29,5 @@ if st.button("Predict"):
 
 # Show Results when the button is clicked
     result = species[np.argmax(prediction)]
-    st.write("**This flower belongs to " + result + " class**")
-
+    st.write("**Bunganya masuk kelompok bunga " + result )
+    st.image(result)
