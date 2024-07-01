@@ -30,4 +30,4 @@ if st.button("Prediksi"):
 # Show Results when the button is clicked
     result = species[np.argmax(prediction)]
     st.write("**Bunganya masuk kelompok bunga **" + result )
-    np.where(result=='setosa',st.image('setosa.jpg'), np.where(result=='virginica', st.image('virginica.jpg'), st.image('versicolor.jpg')))
+    #np.where(result=='setosa',st.image('setosa.jpg'), np.where(result=='virginica', st.image('virginica.jpg'), st.image('versicolor.jpg')))
