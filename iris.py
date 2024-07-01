@@ -30,4 +30,4 @@ if st.button("Prediksi"):
 # Show Results when the button is clicked
     result = species[np.argmax(prediction)]
     st.write("**Bunganya masuk kelompok bunga " + result )
-    st.image('result')
+    st.image(f'{result}.jpg')
