@@ -5,7 +5,7 @@ import pickle
 import numpy as np
 
 # Load the best model
-with open('iris_model.pkl', 'rb') as f:
+with open('iris_rf.pkl', 'rb') as f:
     model = pickle.load(f)
 
 species = ['setosa', 'versicolor', 'virginica']
